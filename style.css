@@ -1021,17 +1021,39 @@ img {
     transform: translateY(0);
 }
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 800px) {
+
+    /* HEADER FIXO */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 20px 18px;
+    }
+
+    /* MENU MOBILE */
     .nav {
         position: fixed;
         inset: 0;
+        z-index: 99;
+
+        width: 100%;
+        height: 100vh;
+
         background: var(--bg);
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 25px;
+
         transform: translateY(-100%);
         transition: transform .5s ease;
     }
@@ -1053,10 +1075,15 @@ img {
         z-index: 101;
     }
 
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
     .hero {
         min-height: auto;
         display: block;
-        padding: 150px 6vw 80px;
+        padding: 130px 18px 70px;
     }
 
     .hero-content {
@@ -1080,6 +1107,11 @@ img {
         margin: 70px 0 0 auto;
     }
 
+
+    /* =========================
+       MANIFESTO
+    ========================= */
+
     .manifesto-content,
     .projects-heading {
         display: block;
@@ -1096,12 +1128,17 @@ img {
         margin-top: 50px;
     }
 
+
+    /* =========================
+       SEÇÕES
+    ========================= */
+
     .section {
-        padding-top: 110px;
+        padding-top: 100px;
     }
 
     .section-label {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
     }
 
     .section-heading {
@@ -1112,6 +1149,11 @@ img {
         margin-top: 30px;
     }
 
+
+    /* =========================
+       STORIES
+    ========================= */
+
     .story-large,
     .story-small,
     .story-medium {
@@ -1120,8 +1162,13 @@ img {
     }
 
     .story {
-        margin-bottom: 80px;
+        margin-bottom: 70px;
     }
+
+
+    /* =========================
+       PROJETOS
+    ========================= */
 
     .projects-heading p {
         margin-top: 40px;
@@ -1140,10 +1187,20 @@ img {
         font-size: 24px;
     }
 
+
+    /* =========================
+       CATS
+    ========================= */
+
     .cats-image,
     .cats-caption {
         width: 100%;
     }
+
+
+    /* =========================
+       INSTAGRAM
+    ========================= */
 
     .instagram-header {
         display: block;
@@ -1163,13 +1220,23 @@ img {
         transform: none;
     }
 
+
+    /* =========================
+       CONTATO
+    ========================= */
+
     .contact {
-        padding: 150px 6vw;
+        padding: 120px 18px;
     }
 
     .contact h2 {
         font-size: clamp(70px, 18vw, 115px);
     }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     .footer-top,
     .footer-middle,
@@ -1199,15 +1266,23 @@ img {
         margin-top: 10px;
     }
 
+
+    /* CURSOR */
     .cursor,
     .cursor-label {
         display: none;
     }
 }
 
+
+/* =========================================================
+   MOBILE PEQUENO
+========================================================= */
+
 @media (max-width: 480px) {
+
     .header {
-        padding-top: 22px;
+        padding: 18px;
     }
 
     .logo span {
@@ -1215,7 +1290,7 @@ img {
     }
 
     .hero {
-        padding-top: 130px;
+        padding-top: 120px;
     }
 
     .hero-top {
@@ -1261,7 +1336,13 @@ img {
     }
 }
 
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
