@@ -60,12 +60,12 @@ button {
     --text: #F1F1EC;
     --muted: #8D969D;
 
-    --blue: #0B3D91;
-    --blue-light: #1769C2;
+    --blue: #102746;
+    --blue-light: #102746;
 
     --red: #E53935;
 
-    --line: rgba(241, 241, 236, 0.16);
+    --line: #102746;
 
     --serif: "Cormorant Garamond", serif;
     --sans: "Manrope", sans-serif;
