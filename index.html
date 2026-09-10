@@ -1,1025 +1,233 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Matheus Augusto — Fotografia e Videomaker em Cajati, SP."
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matheus Augusto — Fotografia e Videomaker em Cajati, SP.">
+    <meta name="theme-color" content="#0B0D0F">
     <title>Matheus Augusto — Fotografia & Videomaker</title>
 
-    <link rel="icon" type="image/x-icon" href="imgs/logo.jpeg">
-
-    <!-- =====================================================
-         GOOGLE FONTS
-    ====================================================== -->
+    <link rel="icon" type="image/jpeg" href="imgs/logo.jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
-
-    <!-- =====================================================
-         CAMERA LOADER
-    ====================================================== -->
-
-    <div class="camera-loader">
-
+    <div class="camera-loader" aria-hidden="true">
         <div class="camera-top">
-
-            <span class="rec">
-                <i></i>
-                REC
-            </span>
-
-            <span id="loader-timer">
-                00:00:00
-            </span>
-
+            <span class="rec"><i></i> REC</span>
+            <span id="loader-timer">00:00:00</span>
         </div>
-
 
         <div class="camera-corners">
-
             <span class="corner top-left"></span>
-
             <span class="corner top-right"></span>
-
             <span class="corner bottom-left"></span>
-
             <span class="corner bottom-right"></span>
-
         </div>
-
 
         <div class="camera-center">
-
             <div class="focus-ring"></div>
-
-            <div class="loader-name">
-
-                MATHEUS
-                <br>
-
-                <em>AUGUSTO</em>
-
-            </div>
-
-            <p>
-                FOTOGRAFIA &amp; VIDEOMAKER
-            </p>
-
+            <div class="loader-name">MATHEUS<br><em>AUGUSTO</em></div>
+            <p>FOTOGRAFIA &amp; VIDEOMAKER</p>
         </div>
-
 
         <div class="camera-bottom">
-
-            <span>
-                CAJATI — SP
-            </span>
-
-            <span>
-                35MM
-            </span>
-
-            <span>
-                ISO 800
-            </span>
-
+            <span>CAJATI — SP</span>
+            <span>35MM</span>
+            <span>ISO 800</span>
         </div>
-
 
         <div class="loader-flash"></div>
-
     </div>
 
-
-
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
-
     <header class="header">
-
         <div class="header-inner">
-
-            <a
-                href="#inicio"
-                class="logo"
-            >
-
-                <span>
-                    Matheus Augusto.
-                </span>
-
-                <small>
-                    CAJATI — SP
-                </small>
-
+            <a href="#inicio" class="logo" aria-label="Matheus Augusto — início">
+                <span>Matheus Augusto.</span>
+                <small>CAJATI — SP</small>
             </a>
 
-
-            <nav class="nav">
-
-                <a href="#sobre">
-                    Sobre
-                </a>
-
-                <a href="#historias">
-                    Histórias
-                </a>
-
-                <a href="#projetos">
-                    Projetos
-                </a>
-
-                <a href="#instagram">
-                    Portfólio
-                </a>
-
-                <a href="#contato">
-                    Contato
-                </a>
-
+            <nav class="nav" aria-label="Navegação principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#historias">Histórias</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#instagram">Portfólio</a>
+                <a href="#contato">Contato</a>
             </nav>
 
-
-            <button
-                class="menu-button"
-                aria-label="Abrir menu"
-            >
-
+            <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
                 <span></span>
                 <span></span>
-
             </button>
-
         </div>
-
     </header>
 
-
-
-    <!-- =====================================================
-         MAIN
-    ====================================================== -->
-
     <main id="inicio">
-
-
-
-        <!-- =================================================
-             HERO
-        ================================================== -->
-
         <section class="hero">
-
             <div class="hero-content">
-
                 <div class="hero-top reveal">
-
-                    <span>
-                        01 / 06
-                    </span>
-
-                    <span>
-                        FOTOGRAFIA &amp; VIDEOMAKER
-                    </span>
-
+                    <span>01 / 06</span>
+                    <span>FOTOGRAFIA &amp; VIDEOMAKER</span>
                 </div>
 
-
-                <div class="hero-title-wrap">
-
-                    <h1 class="hero-title reveal">
-
-                        Histórias
-                        <br>
-
-                        que merecem
-                        <br>
-
-                        <em>ser vistas.</em>
-
-                    </h1>
-
-                </div>
-
+                <h1 class="hero-title reveal">
+                    Histórias<br>
+                    que merecem<br>
+                    <em>ser vistas.</em>
+                </h1>
 
                 <div class="hero-bottom reveal">
-
-                    <p>
-
-                        Pessoas, momentos e marcas
-                        registrados através de um olhar
-                        autoral.
-
-                    </p>
-
+                    <p>Pessoas, momentos e marcas registrados através de um olhar autoral.</p>
                 </div>
-
             </div>
-
 
             <div class="hero-image-wrap">
-
                 <div class="hero-meta">
-
-                    <span>
-                        FRAME 024
-                    </span>
-
-                    <span>
-                        CAJATI — SP
-                    </span>
-
-                    <span>
-                        18:42
-                    </span>
-
+                    <span>FRAME 024</span>
+                    <span>CAJATI — SP</span>
+                    <span>18:42</span>
                 </div>
-
-
                 <div class="hero-image">
-
-                    <img
-                        src="imgs/matheus.jpeg"
-                        alt="Fotografia de Matheus Augusto"
-                    >
-
+                    <img src="imgs/matheus.jpeg" alt="Matheus Augusto, fotógrafo e videomaker" fetchpriority="high">
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- =================================================
-             MANIFESTO
-        ================================================== -->
-
-        <section
-            class="manifesto section"
-            id="sobre"
-        >
-
-            <div class="section-label reveal">
-
-                <span>
-                    02
-                </span>
-
-                <span>
-                    MANIFESTO
-                </span>
-
-            </div>
-
-
+        <section class="manifesto section" id="sobre">
+            <div class="section-label reveal"><span>02</span><span>MANIFESTO</span></div>
             <div class="manifesto-content">
-
-                <h2 class="reveal">
-
-                    Fotografar é
-                    <br>
-
-                    guardar o que
-                    <br>
-
-                    <em>passa.</em>
-
-                </h2>
-
-
+                <h2 class="reveal">Fotografar é<br>guardar o que<br><em>passa.</em></h2>
                 <div class="manifesto-text reveal">
-
-                    <p>
-
-                        Cada imagem carrega um momento
-                        que não volta.
-
-                    </p>
-
-                    <p>
-
-                        Meu trabalho é transformar
-                        acontecimentos em memórias
-                        visuais que continuam contando
-                        histórias mesmo depois que o
-                        momento termina.
-
-                    </p>
-
+                    <p>Cada imagem carrega um momento que não volta.</p>
+                    <p>Meu trabalho é transformar acontecimentos em memórias visuais que continuam contando histórias mesmo depois que o momento termina.</p>
                 </div>
-
             </div>
-
         </section>
 
-
-
-        <!-- =================================================
-             HISTÓRIAS
-        ================================================== -->
-
-        <section
-            class="stories section"
-            id="historias"
-        >
-
-            <div class="section-label reveal">
-
-                <span>
-                    03
-                </span>
-
-                <span>
-                    HISTÓRIAS
-                </span>
-
-            </div>
-
+        <section class="stories section" id="historias">
+            <div class="section-label reveal"><span>03</span><span>HISTÓRIAS</span></div>
 
             <div class="section-heading reveal">
-
-                <h2>
-                    Momentos
-                    <em>reais.</em>
-                </h2>
-
-                <p>
-                    Fotografia documental,
-                    espontânea e emocional.
-                </p>
-
+                <h2>Momentos <em>reais.</em></h2>
+                <p>Fotografia documental, espontânea e emocional.</p>
             </div>
-
-
-
-            <!-- STORY 01 -->
 
             <article class="story story-large reveal">
-
-                <a
-                    href="https://www.instagram.com/p/DccYsJDAD4v/?stkn=Znd0NG51dnNtaXMw"
-                    class="image-link"
-                >
-
-                    <div class="story-image">
-
-                        <img
-                            src="imgs/casamento.jpeg"
-                            alt="Fotografia de casamento"
-                        >
-
-                    </div>
-
-                    <div class="story-info">
-
-                        <span>
-                            01
-                        </span>
-
-                        <h3>
-                            Casamentos
-                        </h3>
-
-                        <span>
-                            VER HISTÓRIA ↗
-                        </span>
-
-                    </div>
-
+                <a href="https://www.instagram.com/p/DccYsJDAD4v/" target="_blank" rel="noopener noreferrer" class="image-link">
+                    <div class="story-image"><img src="imgs/casamento.jpeg" alt="Fotografia de casamento" loading="lazy"></div>
+                    <div class="story-info"><span>01</span><h3>Casamentos</h3><span>VER HISTÓRIA ↗</span></div>
                 </a>
-
             </article>
-
-
-
-            <!-- STORY 02 -->
 
             <article class="story story-small reveal">
-
-                <a
-                    href="#"
-                    class="image-link"
-                >
-
-                    <div class="story-image">
-
-                        <img
-                            src="imgs/aniversario.jpeg"
-                            alt="Fotografia de aniversário"
-                        >
-
-                    </div>
-
-                    <div class="story-info">
-
-                        <span>
-                            02
-                        </span>
-
-                        <h3>
-                            Aniversários
-                        </h3>
-
-                        <span>
-                            VER HISTÓRIA ↗
-                        </span>
-
-                    </div>
-
+                <a href="#instagram" class="image-link">
+                    <div class="story-image"><img src="imgs/aniversario.jpeg" alt="Fotografia de aniversário" loading="lazy"></div>
+                    <div class="story-info"><span>02</span><h3>Aniversários</h3><span>VER PORTFÓLIO ↗</span></div>
                 </a>
-
             </article>
-
-
-
-            <!-- STORY 03 -->
 
             <article class="story story-medium reveal">
-
-                <a
-                    href="http://127.0.0.1:5500/index.html"
-                    class="image-link"
-                >
-
-                    <div class="story-image">
-
-                        <img
-                            src="imgs/infancia.jpeg"
-                            alt="Fotografia de infância"
-                        >
-
-                    </div>
-
-                    <div class="story-info">
-
-                        <span>
-                            03
-                        </span>
-
-                        <h3>
-                            Infância
-                        </h3>
-
-                        <span>
-                            VER HISTÓRIA ↗
-                        </span>
-
-                    </div>
-
+                <a href="https://www.instagram.com/p/DbPQiHKAMEt/?stkn=aXRzMzBuOGxrY2Iz" target="_blank" rel="noopener noreferrer" class="image-link">
+                    <div class="story-image"><img src="imgs/infancia.jpeg" alt="Fotografia de infância" loading="lazy"></div>
+                    <div class="story-info"><span>03</span><h3>Infância</h3><span>VER PORTFÓLIO ↗</span></div>
                 </a>
-
             </article>
-
         </section>
 
-
-
-        <!-- =================================================
-             PROJETOS COMERCIAIS
-        ================================================== -->
-
-        <section
-            class="projects section"
-            id="projetos"
-        >
-
-            <div class="section-label reveal">
-
-                <span>
-                    04
-                </span>
-
-                <span>
-                    PROJETOS
-                </span>
-
-            </div>
-
+        <section class="projects section" id="projetos">
+            <div class="section-label reveal"><span>04</span><span>PROJETOS</span></div>
 
             <div class="projects-heading reveal">
-
-                <h2>
-
-                    Marcas também
-                    <br>
-
-                    têm <em>histórias.</em>
-
-                </h2>
-
-                <p>
-
-                    Conteúdo visual para empresas,
-                    negócios e projetos que querem
-                    ser lembrados.
-
-                </p>
-
+                <h2>Marcas também<br>têm <em>histórias.</em></h2>
+                <p>Conteúdo visual para empresas, negócios e projetos que querem ser lembrados.</p>
             </div>
-
 
             <div class="projects-list">
-
-
-                <!-- PROJETO 01 -->
-
-                <a
-                    href="https://www.instagram.com/reel/DZNfidjAEpf/?stkn=YWV2YWZ3ZnV5aG55"
-                    class="project reveal"
-                >
-
-                    <div class="project-number">
-                        01
-                    </div>
-
-                    <div class="project-name">
-                         David Mota - Mecânica Automotiva
-                    </div>
-
-                    <div class="project-type">
-                        COMERCIAL
-                    </div>
-
-                    <div class="project-arrow">
-                        ↗
-                    </div>
-
+                <a href="https://www.instagram.com/reel/DZNfidjAEpf/" target="_blank" rel="noopener noreferrer" class="project reveal">
+                    <div class="project-number">01</div><div class="project-name">David Mota — Mecânica Automotiva</div><div class="project-type">COMERCIAL</div><div class="project-arrow">↗</div>
                 </a>
-
-
-
-                <!-- PROJETO 02 -->
-
-                <a
-                    href="https://www.instagram.com/reel/DZYVcSts2RC/?stkn=YXB0Y3ZqYzJuMTl4"
-                    class="project reveal"
-                >
-
-                    <div class="project-number">
-                        02
-                    </div>
-
-                    <div class="project-name">
-                        Nasario Patisserie
-                    </div>
-
-                    <div class="project-type">
-                        GASTRONOMIA
-                    </div>
-
-                    <div class="project-arrow">
-                        ↗
-                    </div>
-
+                <a href="https://www.instagram.com/reel/DZYVcSts2RC/" target="_blank" rel="noopener noreferrer" class="project reveal">
+                    <div class="project-number">02</div><div class="project-name">Nasario Patisserie</div><div class="project-type">GASTRONOMIA</div><div class="project-arrow">↗</div>
                 </a>
-
-
-
-                <!-- PROJETO 03 -->
-
-                <a
-                    href="https://www.instagram.com/reel/DZcjHB4Rwl7/?stkn=cmFvdWRtYnlhdW1t"
-                    class="project reveal"
-                >
-
-                    <div class="project-number">
-                        03
-                    </div>
-
-                    <div class="project-name">
-                        Kiwi Case
-                    </div>
-
-                    <div class="project-type">
-                        TECNOLOGIA
-                    </div>
-
-                    <div class="project-arrow">
-                        ↗
-                    </div>
-
+                <a href="https://www.instagram.com/reel/DZcjHB4Rwl7/" target="_blank" rel="noopener noreferrer" class="project reveal">
+                    <div class="project-number">03</div><div class="project-name">Kiwi Case</div><div class="project-type">TECNOLOGIA</div><div class="project-arrow">↗</div>
                 </a>
-
-                <!-- PROJETO 04 -->
-
-                <a
-                    href="https://www.instagram.com/reel/DZxy0MusSdn/?stkn=MThsazBuajB4NnFwNA=="
-                    class="project reveal"
-                >
-
-                    <div class="project-number">
-                        04
-                    </div>
-
-                    <div class="project-name">
-                        Barbearia Adriano
-                    </div>
-
-                    <div class="project-type">
-                        COMERCIAL
-                    </div>
-
-                    <div class="project-arrow">
-                        ↗
-                    </div>
-
+                <a href="https://www.instagram.com/reel/DZxy0MusSdn/" target="_blank" rel="noopener noreferrer" class="project reveal">
+                    <div class="project-number">04</div><div class="project-name">Barbearia Adriano</div><div class="project-type">COMERCIAL</div><div class="project-arrow">↗</div>
                 </a>
-
-                <!-- PROJETO 05 -->
-
-                <a
-                    href="https://www.instagram.com/reel/DZ80Ka3g9dK/?stkn=MXZoMndyaTZ0aXI1cw=="
-                    class="project reveal"
-                >
-
-                    <div class="project-number">
-                        04
-                    </div>
-
-                    <div class="project-name">
-                        Stop Motos
-                    </div>
-
-                    <div class="project-type">
-                        COMERCIAL
-                    </div>
-
-                    <div class="project-arrow">
-                        ↗
-                    </div>
-
+                <a href="https://www.instagram.com/reel/DZ80Ka3g9dK/" target="_blank" rel="noopener noreferrer" class="project reveal">
+                    <div class="project-number">05</div><div class="project-name">Stop Motos</div><div class="project-type">COMERCIAL</div><div class="project-arrow">↗</div>
                 </a>
-
             </div>
-
         </section>
 
 
-
-        <!-- =================================================
-             INSTAGRAM / PORTFÓLIO
-        ================================================== -->
-
-        <section
-            class="instagram section"
-            id="instagram"
-        >
-
-            <div class="section-label reveal">
-
-                <span>
-                    05
-                </span>
-
-                <span>
-                    PORTFÓLIO
-                </span>
-
-            </div>
-
+        <section class="instagram section" id="instagram">
+            <div class="section-label reveal"><span>05</span><span>PORTFÓLIO</span></div>
 
             <div class="instagram-header reveal">
-
                 <div>
-
-                    <span class="instagram-kicker">
-                        ACOMPANHE O TRABALHO
-                    </span>
-
-                    <h2>
-                        @matheusaugusto_fvm
-                    </h2>
-
+                    <span class="instagram-kicker">ACOMPANHE O TRABALHO</span>
+                    <h2>@matheusaugusto_fvm</h2>
                 </div>
-
-
-                <a
-                    href="https://instagram.com/matheusaugusto_fvm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-button"
-                >
-
-                    INSTAGRAM ↗
-
-                </a>
-
+                <a href="https://instagram.com/matheusaugusto_fvm" target="_blank" rel="noopener noreferrer" class="instagram-button">INSTAGRAM ↗</a>
             </div>
-
-
-
-            <!-- INSTAGRAM GRID -->
 
             <div class="instagram-grid">
-
-
-                <!-- POST 01 -->
-
-                <a
-                    href="https://www.instagram.com/p/Dcx-5W7EU9O/?stkn=MWx1cGI4MjQycTIydQ=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-post reveal"
-                >
-
-                    <img
-                        src="imgs/casal1.jpeg"
-                        alt="Fotografia do portfólio"
-                    >
-
-                    <span>
-                        VER ↗
-                    </span>
-
+                <a href="https://www.instagram.com/p/Dcx-5W7EU9O/" target="_blank" rel="noopener noreferrer" class="instagram-post reveal">
+                    <img src="imgs/casal1.jpeg" alt="Fotografia de casal" loading="lazy"><span>VER ↗</span>
                 </a>
-
-
-
-                <!-- POST 02 -->
-
-                <a
-                    href="https://www.instagram.com/p/Dc_EUiXEbo2/?img_index=5&stkn=a28zemU1Zjl3YzVp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-post reveal"
-                >
-
-                    <img
-                        src="imgs/baby2.jpeg"
-                        alt="Fotografia do portfólio"
-                    >
-
-                    <span>
-                        VER ↗
-                    </span>
-
+                <a href="https://www.instagram.com/p/Dc_EUiXEbo2/" target="_blank" rel="noopener noreferrer" class="instagram-post reveal">
+                    <img src="imgs/baby2.jpeg" alt="Fotografia de bebê" loading="lazy"><span>VER ↗</span>
                 </a>
-
-
-
-                <!-- POST 03 -->
-
-                <a
-                    href="https://www.instagram.com/p/Dc_EsedESKY/?stkn=ZzY4ZWNsa2duNGFn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-post reveal"
-                >
-
-                    <img
-                        src="imgs/familia3.jpeg"
-                        alt="Fotografia do portfólio"
-                    >
-
-                    <span>
-                        VER ↗
-                    </span>
-
+                <a href="https://www.instagram.com/p/Dc_EsedESKY/" target="_blank" rel="noopener noreferrer" class="instagram-post reveal">
+                    <img src="imgs/familia3.jpeg" alt="Fotografia de família" loading="lazy"><span>VER ↗</span>
                 </a>
-
-
-
-                <!-- POST 04 -->
-
-                <a
-                    href="https://www.instagram.com/p/DbyYq2fFCg3/?img_index=3&stkn=MXg5ZGEzbDNlN3AzYg=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-post reveal"
-                >
-
-                    <img
-                        src="imgs/moca4.jpeg"
-                        alt="Fotografia do portfólio"
-                    >
-
-                    <span>
-                        VER ↗
-                    </span>
-
+                <a href="https://www.instagram.com/p/DbyYq2fFCg3/" target="_blank" rel="noopener noreferrer" class="instagram-post reveal">
+                    <img src="imgs/moca4.jpeg" alt="Fotografia feminina" loading="lazy"><span>VER ↗</span>
                 </a>
-
-
-
-                <!-- POST 05 -->
-
-                <a
-                    href="INSTAGRAM_05"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="instagram-post reveal"
-                >
-
-                    <img
-                        src="imgs/casal5.jpeg"
-                        alt="Fotografia do portfólio"
-                    >
-
-                    <span>
-                        VER ↗
-                    </span>
-
+                <a href="#contato" class="instagram-post reveal">
+                    <img src="imgs/casal5.jpeg" alt="Fotografia de casal" loading="lazy"><span>CONTATO ↗</span>
                 </a>
-
             </div>
-
         </section>
 
-
-
-        <!-- =================================================
-             CTA
-        ================================================== -->
-
-        <section
-            class="contact section"
-            id="contato"
-        >
-
+        <section class="contact section" id="contato">
             <div class="contact-inner reveal">
-
-                <span class="contact-kicker">
-                    VAMOS CRIAR ALGO?
-                </span>
-
-
-                <h2>
-
-                    Sua história
-                    <br>
-
-                    merece ser
-                    <br>
-
-                    <em>vista.</em>
-
-                </h2>
-
-
-                <p>
-
-                    Para ensaios, eventos,
-                    casamentos ou projetos
-                    comerciais.
-
-                </p>
-
+                <span class="contact-kicker">VAMOS CRIAR ALGO?</span>
+                <h2>Sua história<br>merece ser<br><em>vista.</em></h2>
+                <p>Para ensaios, eventos, casamentos ou projetos comerciais.</p>
 
                 <div class="contact-buttons">
-
-                    <a
-                        href="https://wa.me/5555999070782"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="contact-button"
-                    >
-
-                        WHATSAPP ↗
-
-                    </a>
-
-
-                    <a
-                        href="https://instagram.com/matheusaugusto_fvm"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="contact-button secondary"
-                    >
-
-                        INSTAGRAM ↗
-
-                    </a>
-
+                    <a href="https://wa.me/5555999070782" target="_blank" rel="noopener noreferrer" class="contact-button">WHATSAPP ↗</a>
+                    <a href="https://instagram.com/matheusaugusto_fvm" target="_blank" rel="noopener noreferrer" class="contact-button secondary">INSTAGRAM ↗</a>
                 </div>
-
             </div>
-
         </section>
-
     </main>
 
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
     <footer class="footer">
-
         <div class="footer-top">
-
-            <div class="footer-logo">
-
-                Matheus
-                <em>Augusto.</em>
-
-            </div>
-
-
-            <div class="footer-location">
-
-                CAJATI — SP
-                <br>
-
-                E REGIÃO
-
-            </div>
-
+            <div class="footer-logo">Matheus <em>Augusto.</em></div>
+            <div class="footer-location">CAJATI — SP<br>E REGIÃO</div>
         </div>
-
 
         <div class="footer-middle">
-
-            <div>
-
-                <span>
-                    FOTOGRAFIA
-                </span>
-
-                <span>
-                    VIDEOMAKER
-                </span>
-
-                <span>
-                    CONTEÚDO
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <a
-                    href="https://instagram.com/matheusaugusto_fvm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    INSTAGRAM ↗
-
-                </a>
-
-            </div>
-
+            <div><span>FOTOGRAFIA</span><span>VIDEOMAKER</span><span>CONTEÚDO</span></div>
+            <div><a href="https://instagram.com/matheusaugusto_fvm" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a></div>
         </div>
-
 
         <div class="footer-bottom">
-
-            <span>
-
-                © <span class="current-year"></span>
-                MATHEUS AUGUSTO
-
-            </span>
-
-
-            <span>
-
-                TODOS OS DIREITOS CAPTURADOS.
-
-            </span>
-
+            <span>© <span class="current-year"></span> MATHEUS AUGUSTO</span>
+            <span>TODOS OS DIREITOS CAPTURADOS.</span>
         </div>
-
     </footer>
 
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
