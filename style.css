@@ -1027,13 +1027,7 @@ img {
 
 @media (max-width: 800px) {
 
-    /* GARANTE QUE O PADDING NÃO CRIE ESPAÇO LATERAL */
-
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
+    /* BASE */
 
     html,
     body {
@@ -1042,9 +1036,15 @@ img {
         overflow-x: hidden;
     }
 
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
 
     /* =====================================================
-       HEADER FIXO
+       HEADER
     ===================================================== */
 
     .header {
@@ -1052,8 +1052,14 @@ img {
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 1000;
         padding: 20px 18px;
+        z-index: 1000;
+    }
+
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
 
@@ -1067,6 +1073,7 @@ img {
         z-index: 99;
 
         width: 100%;
+        max-width: 100%;
         height: 100dvh;
 
         background: var(--bg);
@@ -1080,8 +1087,6 @@ img {
 
         transform: translateY(-100%);
         transition: transform .5s ease;
-
-        box-sizing: border-box;
     }
 
     .nav.open {
@@ -1108,29 +1113,40 @@ img {
 
     .hero {
         width: 100%;
+        max-width: 100%;
         min-height: auto;
 
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         padding: 130px 18px 70px;
         margin: 0;
+
+        overflow: hidden;
     }
 
     .hero-content {
         width: 100%;
         max-width: 100%;
-        margin: 0 auto;
+        margin: 0;
     }
 
     .hero-title {
         width: 100%;
+        max-width: 100%;
+
         font-size: clamp(60px, 18vw, 110px);
     }
 
     .hero-bottom {
         width: 100%;
+        max-width: 100%;
         margin-top: 45px;
+    }
+
+    .hero-bottom p {
+        max-width: 100%;
     }
 
     .hero-image-wrap {
@@ -1150,11 +1166,10 @@ img {
        MANIFESTO
     ===================================================== */
 
-    .manifesto-content,
-    .projects-heading {
+    .manifesto-content {
         display: block;
         width: 100%;
-        margin: 0;
+        max-width: 100%;
     }
 
     .manifesto h2,
@@ -1162,10 +1177,15 @@ img {
     .projects-heading h2,
     .cats-intro h2 {
         font-size: clamp(60px, 17vw, 105px);
+        max-width: 100%;
     }
 
     .manifesto-text {
         margin-top: 50px;
+    }
+
+    .manifesto-text p {
+        max-width: 100%;
     }
 
 
@@ -1174,20 +1194,28 @@ img {
     ===================================================== */
 
     .section {
-        width: 100%;
+        width: calc(100% - 36px);
+        max-width: none;
+
+        margin-left: 18px;
+        margin-right: 18px;
+
         padding-top: 100px;
     }
 
     .section-label {
         margin-bottom: 45px;
+        max-width: 100%;
     }
 
     .section-heading {
         display: block;
         width: 100%;
+        max-width: 100%;
     }
 
     .section-heading p {
+        max-width: 100%;
         margin-top: 30px;
     }
 
@@ -1196,17 +1224,34 @@ img {
        STORIES
     ===================================================== */
 
+    .story,
     .story-large,
     .story-small,
     .story-medium {
         width: 100%;
+        max-width: 100%;
         margin-left: 0;
         margin-right: 0;
     }
 
     .story {
-        width: 100%;
         margin-bottom: 70px;
+    }
+
+    .story-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .story-info {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .story-info h3 {
+        min-width: 0;
+        overflow-wrap: break-word;
     }
 
 
@@ -1214,13 +1259,29 @@ img {
        PROJETOS
     ===================================================== */
 
+    .projects-heading {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
     .projects-heading p {
+        max-width: 100%;
         margin-top: 40px;
+    }
+
+    .projects-list {
+        width: 100%;
+        max-width: 100%;
     }
 
     .project {
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
         grid-template-columns: 35px minmax(0, 1fr) 25px;
+
         min-height: 85px;
     }
 
@@ -1229,7 +1290,16 @@ img {
     }
 
     .project-name {
+        min-width: 0;
+        max-width: 100%;
+
         font-size: 24px;
+
+        overflow-wrap: break-word;
+    }
+
+    .project-arrow {
+        min-width: 0;
     }
 
 
@@ -1237,11 +1307,24 @@ img {
        CATS
     ===================================================== */
 
+    .cats-intro {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .cats-image,
     .cats-caption {
         width: 100%;
+        max-width: 100%;
+
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .cats-caption {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
     }
 
 
@@ -1251,6 +1334,12 @@ img {
 
     .instagram-header {
         display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .instagram-header h2 {
+        max-width: 100%;
     }
 
     .instagram-button {
@@ -1260,7 +1349,17 @@ img {
 
     .instagram-grid {
         width: 100%;
+        max-width: 100%;
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .instagram-post {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
     }
 
     .instagram-post span {
@@ -1275,20 +1374,45 @@ img {
 
     .contact {
         width: 100%;
+        max-width: 100%;
+
         padding: 120px 18px;
+
+        overflow: hidden;
+    }
+
+    .contact-inner {
+        width: 100%;
+        max-width: 100%;
     }
 
     .contact h2 {
+        max-width: 100%;
         font-size: clamp(65px, 18vw, 115px);
+    }
+
+    .contact p {
+        max-width: 100%;
+    }
+
+    .contact-buttons {
+        max-width: 100%;
     }
 
 
     /* =====================================================
-       FOOTER — TUDO CENTRALIZADO
+       FOOTER
     ===================================================== */
 
     .footer {
-        width: 100%;
+        width: calc(100% - 36px);
+        max-width: none;
+
+        margin-left: 18px;
+        margin-right: 18px;
+
+        padding: 60px 0 30px;
+
         text-align: center;
     }
 
@@ -1296,6 +1420,7 @@ img {
     .footer-middle,
     .footer-bottom {
         width: 100%;
+        max-width: 100%;
 
         display: flex;
         flex-direction: column;
@@ -1304,9 +1429,6 @@ img {
         justify-content: center;
 
         text-align: center;
-
-        margin-left: auto;
-        margin-right: auto;
     }
 
 
@@ -1316,8 +1438,22 @@ img {
         gap: 20px;
     }
 
+    .footer-logo {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 50px;
+        text-align: center;
+
+        overflow-wrap: break-word;
+    }
+
     .footer-location {
+        width: 100%;
+        max-width: 100%;
+
         margin-top: 15px;
+
         text-align: center;
     }
 
@@ -1326,12 +1462,14 @@ img {
 
     .footer-middle {
         padding: 50px 0;
-        gap: 35px;
+        gap: 30px;
     }
 
     .footer-middle > div:first-child {
-        display: flex;
+        width: 100%;
+        max-width: 100%;
 
+        display: flex;
         flex-direction: column;
 
         align-items: center;
@@ -1339,21 +1477,21 @@ img {
 
         gap: 12px;
 
-        margin: 0 auto;
+        margin: 0;
 
         text-align: center;
     }
 
     .footer-middle > div:last-child {
-        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
         text-align: center;
     }
 
-
-    /* LINKS DO FOOTER */
-
-    .footer-middle a,
-    .footer-bottom a {
+    .footer-middle a {
         text-align: center;
     }
 
@@ -1361,33 +1499,24 @@ img {
     /* FOOTER FINAL */
 
     .footer-bottom {
+        padding-top: 20px;
         gap: 10px;
+
         text-align: center;
     }
 
     .footer-bottom span {
         display: block;
+
+        width: 100%;
+        max-width: 100%;
+
         margin: 0;
+
         text-align: center;
     }
 
-
-    /* LOGO DO FOOTER */
-
-    .footer-logo {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    /* ELEMENTOS INTERNOS DO FOOTER */
-
-    .footer-top > *,
-    .footer-middle > *,
-    .footer-bottom > * {
-        margin-left: auto;
-        margin-right: auto;
+    .footer-bottom a {
         text-align: center;
     }
 
@@ -1413,12 +1542,18 @@ img {
         padding: 18px;
     }
 
+    .header-inner {
+        width: 100%;
+    }
+
     .logo span {
         font-size: 20px;
     }
 
+
+    /* HERO */
+
     .hero {
-        width: 100%;
         padding: 120px 18px 60px;
     }
 
@@ -1438,7 +1573,7 @@ img {
     /* STORIES */
 
     .story-info {
-        grid-template-columns: 35px 1fr;
+        grid-template-columns: 35px minmax(0, 1fr);
     }
 
     .story-info > span:last-child {
@@ -1455,13 +1590,17 @@ img {
 
     .contact-button {
         width: 100%;
+        max-width: 100%;
     }
 
 
     /* FOOTER */
 
     .footer {
-        width: 100%;
+        width: calc(100% - 36px);
+        margin-left: 18px;
+        margin-right: 18px;
+
         text-align: center;
     }
 
@@ -1469,17 +1608,21 @@ img {
     .footer-middle,
     .footer-bottom {
         width: 100%;
+
         align-items: center;
         justify-content: center;
+
         text-align: center;
     }
 
     .footer-logo {
+        width: 100%;
         font-size: 42px;
         text-align: center;
     }
 
     .footer-location {
+        width: 100%;
         text-align: center;
     }
 
@@ -1490,11 +1633,14 @@ img {
     .footer-middle > div:first-child,
     .footer-middle > div:last-child {
         width: 100%;
+        max-width: 100%;
+
         align-items: center;
         text-align: center;
     }
 
     .footer-bottom {
+        width: 100%;
         text-align: center;
     }
 
