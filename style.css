@@ -1063,8 +1063,49 @@ img {
     }
 
 
+ /* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    /* BASE */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+
     /* =====================================================
-       MENU MOBILE
+       HEADER
+    ===================================================== */
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 18px;
+        z-index: 1000;
+    }
+
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       MENU
     ===================================================== */
 
     .nav {
@@ -1114,6 +1155,7 @@ img {
     .hero {
         width: 100%;
         max-width: 100%;
+
         min-height: auto;
 
         display: flex;
@@ -1132,16 +1174,27 @@ img {
         margin: 0;
     }
 
+    .hero-top {
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 15px 30px;
+    }
+
     .hero-title {
         width: 100%;
         max-width: 100%;
 
         font-size: clamp(60px, 18vw, 110px);
+        line-height: .78;
+
+        overflow-wrap: break-word;
     }
 
     .hero-bottom {
         width: 100%;
         max-width: 100%;
+
         margin-top: 45px;
     }
 
@@ -1168,6 +1221,7 @@ img {
 
     .manifesto-content {
         display: block;
+
         width: 100%;
         max-width: 100%;
     }
@@ -1176,8 +1230,12 @@ img {
     .section-heading h2,
     .projects-heading h2,
     .cats-intro h2 {
-        font-size: clamp(60px, 17vw, 105px);
+        width: 100%;
         max-width: 100%;
+
+        font-size: clamp(60px, 17vw, 105px);
+
+        overflow-wrap: break-word;
     }
 
     .manifesto-text {
@@ -1204,12 +1262,15 @@ img {
     }
 
     .section-label {
-        margin-bottom: 45px;
+        width: 100%;
         max-width: 100%;
+
+        margin-bottom: 45px;
     }
 
     .section-heading {
         display: block;
+
         width: 100%;
         max-width: 100%;
     }
@@ -1230,6 +1291,7 @@ img {
     .story-medium {
         width: 100%;
         max-width: 100%;
+
         margin-left: 0;
         margin-right: 0;
     }
@@ -1247,11 +1309,15 @@ img {
         width: 100%;
         max-width: 100%;
         min-width: 0;
+
+        grid-template-columns: 35px minmax(0, 1fr) auto;
     }
 
     .story-info h3 {
         min-width: 0;
-        overflow-wrap: break-word;
+
+        overflow-wrap: anywhere;
+        word-break: normal;
     }
 
 
@@ -1261,6 +1327,7 @@ img {
 
     .projects-heading {
         display: block;
+
         width: 100%;
         max-width: 100%;
     }
@@ -1285,6 +1352,10 @@ img {
         min-height: 85px;
     }
 
+    .project:hover {
+        padding: 0;
+    }
+
     .project-type {
         display: none;
     }
@@ -1295,7 +1366,7 @@ img {
 
         font-size: 24px;
 
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
     }
 
     .project-arrow {
@@ -1323,23 +1394,42 @@ img {
 
     .cats-caption {
         display: flex;
+
         justify-content: space-between;
+        align-items: center;
+
         gap: 10px;
+        flex-wrap: wrap;
     }
 
 
     /* =====================================================
-       INSTAGRAM
+       INSTAGRAM / PORTFÓLIO
     ===================================================== */
 
     .instagram-header {
         display: block;
+
         width: 100%;
         max-width: 100%;
     }
 
     .instagram-header h2 {
+        width: 100%;
         max-width: 100%;
+
+        margin-top: 25px;
+
+        font-family: var(--serif);
+        font-size: clamp(32px, 9vw, 52px);
+
+        font-weight: 300;
+        line-height: .9;
+        letter-spacing: -.04em;
+
+        text-align: center;
+
+        white-space: nowrap;
     }
 
     .instagram-button {
@@ -1378,25 +1468,55 @@ img {
 
         padding: 120px 18px;
 
+        text-align: center;
         overflow: hidden;
     }
 
     .contact-inner {
         width: 100%;
         max-width: 100%;
+
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
     }
 
     .contact h2 {
+        width: 100%;
         max-width: 100%;
+
+        margin: 30px 0;
+
         font-size: clamp(65px, 18vw, 115px);
+
+        text-align: center;
+
+        overflow-wrap: break-word;
     }
 
     .contact p {
-        max-width: 100%;
+        width: 100%;
+        max-width: 400px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
     }
 
     .contact-buttons {
-        max-width: 100%;
+        width: 100%;
+        max-width: 400px;
+
+        justify-content: center;
+        align-items: center;
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
@@ -1431,9 +1551,6 @@ img {
         text-align: center;
     }
 
-
-    /* FOOTER TOPO */
-
     .footer-top {
         gap: 20px;
     }
@@ -1443,9 +1560,10 @@ img {
         max-width: 100%;
 
         font-size: 50px;
+
         text-align: center;
 
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
     }
 
     .footer-location {
@@ -1456,9 +1574,6 @@ img {
 
         text-align: center;
     }
-
-
-    /* FOOTER MEIO */
 
     .footer-middle {
         padding: 50px 0;
@@ -1493,16 +1608,12 @@ img {
 
     .footer-middle a {
         text-align: center;
+        overflow-wrap: anywhere;
     }
-
-
-    /* FOOTER FINAL */
 
     .footer-bottom {
         padding-top: 20px;
         gap: 10px;
-
-        text-align: center;
     }
 
     .footer-bottom span {
@@ -1514,6 +1625,8 @@ img {
         margin: 0;
 
         text-align: center;
+
+        overflow-wrap: anywhere;
     }
 
     .footer-bottom a {
@@ -1538,6 +1651,7 @@ img {
 
 @media (max-width: 480px) {
 
+    /* HEADER */
     .header {
         padding: 18px;
     }
@@ -1552,7 +1666,6 @@ img {
 
 
     /* HERO */
-
     .hero {
         padding: 120px 18px 60px;
     }
@@ -1571,7 +1684,6 @@ img {
 
 
     /* STORIES */
-
     .story-info {
         grid-template-columns: 35px minmax(0, 1fr);
     }
@@ -1581,23 +1693,49 @@ img {
     }
 
 
+    /* PORTFÓLIO */
+    .instagram-header h2 {
+        font-size: 10vw;
+        white-space: nowrap;
+        text-align: center;
+        letter-spacing: -.03em;
+    }
+
+
     /* CONTATO */
+    .contact {
+        padding: 100px 18px;
+    }
+
+    .contact h2 {
+        font-size: clamp(60px, 18vw, 90px);
+        text-align: center;
+    }
+
+    .contact p {
+        max-width: 340px;
+        text-align: center;
+    }
 
     .contact-buttons {
-        flex-direction: column;
         width: 100%;
+        max-width: 340px;
+
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .contact-button {
         width: 100%;
         max-width: 100%;
+        text-align: center;
     }
 
 
     /* FOOTER */
-
     .footer {
         width: calc(100% - 36px);
+
         margin-left: 18px;
         margin-right: 18px;
 
@@ -1680,21 +1818,4 @@ img {
         transition-duration: .01ms !important;
     }
 }
-
-@media (max-width: 800px) {
-  .instagram-header h2 {
-    width: 100%;
-    max-width: 100%;
-    font-size: clamp(55px, 16vw, 95px);
-    line-height: .9;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-}
-
-@media (max-width: 480px) {
-  .instagram-header h2 {
-    font-size: 16vw;
-    letter-spacing: -0.03em;
-  }
 }
