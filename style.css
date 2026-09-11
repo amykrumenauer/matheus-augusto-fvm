@@ -1027,7 +1027,26 @@ img {
 
 @media (max-width: 800px) {
 
-    /* HEADER FIXO */
+    /* GARANTE QUE O PADDING NÃO CRIE ESPAÇO LATERAL */
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       HEADER FIXO
+    ===================================================== */
+
     .header {
         position: fixed;
         top: 0;
@@ -1037,14 +1056,18 @@ img {
         padding: 20px 18px;
     }
 
-    /* MENU MOBILE */
+
+    /* =====================================================
+       MENU MOBILE
+    ===================================================== */
+
     .nav {
         position: fixed;
         inset: 0;
         z-index: 99;
 
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
 
         background: var(--bg);
 
@@ -1052,10 +1075,13 @@ img {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
         gap: 25px;
 
         transform: translateY(-100%);
         transition: transform .5s ease;
+
+        box-sizing: border-box;
     }
 
     .nav.open {
@@ -1076,22 +1102,30 @@ img {
     }
 
 
-    /* =========================
-       CONTEÚDO
-    ========================= */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
+        width: 100%;
         min-height: auto;
-        display: block;
+
+        display: flex;
+        flex-direction: column;
+
         padding: 130px 18px 70px;
+        margin: 0;
     }
 
     .hero-content {
         width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     .hero-title {
-        font-size: clamp(65px, 18vw, 110px);
+        width: 100%;
+        font-size: clamp(60px, 18vw, 110px);
     }
 
     .hero-bottom {
@@ -1101,27 +1135,33 @@ img {
 
     .hero-image-wrap {
         position: relative;
+
+        width: 82vw;
+        max-width: 500px;
+
+        margin: 70px auto 0;
+
         right: auto;
         top: auto;
-        width: 82vw;
-        margin: 70px 0 0 auto;
     }
 
 
-    /* =========================
+    /* =====================================================
        MANIFESTO
-    ========================= */
+    ===================================================== */
 
     .manifesto-content,
     .projects-heading {
         display: block;
+        width: 100%;
+        margin: 0;
     }
 
     .manifesto h2,
     .section-heading h2,
     .projects-heading h2,
     .cats-intro h2 {
-        font-size: clamp(65px, 17vw, 105px);
+        font-size: clamp(60px, 17vw, 105px);
     }
 
     .manifesto-text {
@@ -1129,11 +1169,12 @@ img {
     }
 
 
-    /* =========================
+    /* =====================================================
        SEÇÕES
-    ========================= */
+    ===================================================== */
 
     .section {
+        width: 100%;
         padding-top: 100px;
     }
 
@@ -1143,6 +1184,7 @@ img {
 
     .section-heading {
         display: block;
+        width: 100%;
     }
 
     .section-heading p {
@@ -1150,32 +1192,35 @@ img {
     }
 
 
-    /* =========================
+    /* =====================================================
        STORIES
-    ========================= */
+    ===================================================== */
 
     .story-large,
     .story-small,
     .story-medium {
         width: 100%;
         margin-left: 0;
+        margin-right: 0;
     }
 
     .story {
+        width: 100%;
         margin-bottom: 70px;
     }
 
 
-    /* =========================
+    /* =====================================================
        PROJETOS
-    ========================= */
+    ===================================================== */
 
     .projects-heading p {
         margin-top: 40px;
     }
 
     .project {
-        grid-template-columns: 35px 1fr 25px;
+        width: 100%;
+        grid-template-columns: 35px minmax(0, 1fr) 25px;
         min-height: 85px;
     }
 
@@ -1188,19 +1233,21 @@ img {
     }
 
 
-    /* =========================
+    /* =====================================================
        CATS
-    ========================= */
+    ===================================================== */
 
     .cats-image,
     .cats-caption {
         width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
 
-    /* =========================
+    /* =====================================================
        INSTAGRAM
-    ========================= */
+    ===================================================== */
 
     .instagram-header {
         display: block;
@@ -1212,7 +1259,8 @@ img {
     }
 
     .instagram-grid {
-        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .instagram-post span {
@@ -1221,53 +1269,133 @@ img {
     }
 
 
-    /* =========================
+    /* =====================================================
        CONTATO
-    ========================= */
+    ===================================================== */
 
     .contact {
+        width: 100%;
         padding: 120px 18px;
     }
 
     .contact h2 {
-        font-size: clamp(70px, 18vw, 115px);
+        font-size: clamp(65px, 18vw, 115px);
     }
 
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* =====================================================
+       FOOTER — TUDO CENTRALIZADO
+    ===================================================== */
+
+    .footer {
+        width: 100%;
+        text-align: center;
+    }
 
     .footer-top,
     .footer-middle,
     .footer-bottom {
-        display: block;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* FOOTER TOPO */
+
+    .footer-top {
+        gap: 20px;
     }
 
     .footer-location {
-        margin-top: 25px;
+        margin-top: 15px;
+        text-align: center;
     }
+
+
+    /* FOOTER MEIO */
 
     .footer-middle {
         padding: 50px 0;
+        gap: 35px;
     }
 
     .footer-middle > div:first-child {
+        display: flex;
+
         flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
         gap: 12px;
+
+        margin: 0 auto;
+
+        text-align: center;
     }
 
     .footer-middle > div:last-child {
-        margin-top: 30px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    /* LINKS DO FOOTER */
+
+    .footer-middle a,
+    .footer-bottom a {
+        text-align: center;
+    }
+
+
+    /* FOOTER FINAL */
+
+    .footer-bottom {
+        gap: 10px;
+        text-align: center;
     }
 
     .footer-bottom span {
         display: block;
-        margin-top: 10px;
+        margin: 0;
+        text-align: center;
     }
 
 
-    /* CURSOR */
+    /* LOGO DO FOOTER */
+
+    .footer-logo {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* ELEMENTOS INTERNOS DO FOOTER */
+
+    .footer-top > *,
+    .footer-middle > *,
+    .footer-bottom > * {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       CURSOR
+    ===================================================== */
+
     .cursor,
     .cursor-label {
         display: none;
@@ -1290,7 +1418,8 @@ img {
     }
 
     .hero {
-        padding-top: 120px;
+        width: 100%;
+        padding: 120px 18px 60px;
     }
 
     .hero-top {
@@ -1305,6 +1434,9 @@ img {
         margin-top: 30px;
     }
 
+
+    /* STORIES */
+
     .story-info {
         grid-template-columns: 35px 1fr;
     }
@@ -1312,6 +1444,9 @@ img {
     .story-info > span:last-child {
         display: none;
     }
+
+
+    /* CONTATO */
 
     .contact-buttons {
         flex-direction: column;
@@ -1322,12 +1457,56 @@ img {
         width: 100%;
     }
 
+
+    /* FOOTER */
+
+    .footer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-top,
+    .footer-middle,
+    .footer-bottom {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
     .footer-logo {
         font-size: 42px;
+        text-align: center;
+    }
+
+    .footer-location {
+        text-align: center;
+    }
+
+    .footer-middle {
+        padding: 50px 0;
+    }
+
+    .footer-middle > div:first-child,
+    .footer-middle > div:last-child {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .footer-bottom span {
+        display: block;
+        margin: 0;
+        text-align: center;
     }
 
     .camera-bottom {
         font-size: 7px;
+        text-align: center;
     }
 
     .focus-ring {
